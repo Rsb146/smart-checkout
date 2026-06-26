@@ -73,9 +73,5 @@ src/
 └── App.css                  # Estilos globales y layout
 ```
 
-## Notas sobre imágenes
-
-El proyecto usa URLs de placeholder para las imágenes. Para usar tus imágenes originales, reemplaza los valores de `imagen` en `src/data/productos.js` por los imports correspondientes de `src/assets/images/`.
-
 ---
 *Proyecto desarrollado para el curso ITC · 2026*
