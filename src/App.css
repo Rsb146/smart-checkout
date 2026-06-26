@@ -1,0 +1,80 @@
+/* ── Reset mínimo ───────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: #f8fafc;
+  color: #1e293b;
+  min-height: 100vh;
+}
+
+/* ── Header ─────────────────────────────────────────────────────── */
+.app-header {
+  background: #fff;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.header-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: .85rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.brand {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #1e293b;
+  white-space: nowrap;
+}
+.brand span { color: #6366f1; }
+
+/* ── Layout principal ────────────────────────────────────────────── */
+.app-layout { min-height: 100vh; }
+
+.app-body {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .app-body { grid-template-columns: 1fr; }
+  .cart-aside { order: -1; }
+}
+
+/* ── Catálogo ────────────────────────────────────────────────────── */
+.catalog { min-width: 0; }
+
+.results-hint {
+  font-size: .88rem;
+  color: #64748b;
+  margin-bottom: 1rem;
+}
+
+.global-empty {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #94a3b8;
+}
+.global-empty span { font-size: 3rem; display: block; margin-bottom: .75rem; }
+.global-empty p { font-size: 1rem; color: #475569; margin-bottom: .3rem; }
+.global-empty small { font-size: .82rem; }
+
+/* ── Carrito ─────────────────────────────────────────────────────── */
+.cart-aside { position: relative; }
+.cart-sticky {
+  position: sticky;
+  top: 80px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,.07);
+  padding: 1.25rem;
+}

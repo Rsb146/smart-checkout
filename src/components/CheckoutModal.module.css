@@ -1,0 +1,102 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15,23,42,.55);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.modal {
+  background: #fff;
+  border-radius: 20px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 440px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.2);
+  animation: slideUp .2s ease;
+}
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: .5rem;
+}
+.title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+}
+.closeBtn {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: #94a3b8;
+  cursor: pointer;
+}
+
+.totalPreview {
+  font-size: .9rem;
+  color: #64748b;
+  margin: 0 0 1.25rem;
+}
+.totalPreview strong { color: #6366f1; font-size: 1rem; }
+
+/* Form */
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+  margin-bottom: 1rem;
+}
+.fieldGroup label {
+  font-size: .82rem;
+  font-weight: 600;
+  color: #475569;
+}
+.fieldGroup input {
+  padding: .6rem .85rem;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: .9rem;
+  color: #1e293b;
+  outline: none;
+  transition: border-color .15s;
+}
+.fieldGroup input:focus { border-color: #6366f1; }
+.inputError { border-color: #ef4444 !important; background: #fff5f5; }
+.error { font-size: .75rem; color: #ef4444; }
+
+.submitBtn {
+  background: #6366f1;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: .75rem;
+  font-size: .95rem;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+  margin-top: .5rem;
+  transition: background .15s;
+}
+.submitBtn:hover { background: #4f46e5; }
+
+/* Success */
+.successView {
+  text-align: center;
+  padding: 1rem 0;
+}
+.successIcon { font-size: 3.5rem; display: block; margin-bottom: 1rem; }
+.successView h3 { font-size: 1.3rem; color: #1e293b; margin: 0 0 .5rem; }
+.successView p  { color: #64748b; margin: .25rem 0; font-size: .9rem; }
+.successEmail   { font-size: .82rem !important; }
